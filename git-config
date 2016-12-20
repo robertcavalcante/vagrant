@@ -1,0 +1,7 @@
+[user]
+	name = Robert Cavalcante
+	email = robert.cavalcante@unear.net
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
