@@ -1,11 +1,5 @@
 #!/bin/bash
 
-#Update CentOS with any patches
-yum update -y --exclude=kernel
-
-#Tools
-yum install -y nano git unzip screen
-
 #Apache
 yum install -y httpd httpd-devel httpd-tools
 
@@ -21,15 +15,6 @@ apache httpd start
 
 #PHP
 yum install -y php php-cli php-common php-devel php-mysql
-
-#MySql
-yum install -y mysql mysql-server mysql-devel
-chkconfig --add mysqld
-chkconfig mysqld on
-
-service mysqld start
-
-mysql -u root -e "SHOW DATABASES";
 
 #DOWNWLOAD Starter Content
 cd /vagrant
